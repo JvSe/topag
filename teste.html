@@ -1,0 +1,756 @@
+<!doctype html>
+
+<html class="light" lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>TOPAG | Precisão que Transforma o Solo</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "brand-blue": "#2B348B",
+              "brand-blue-light": "#3f49a6",
+              "on-primary-fixed-variant": "#1a1f54",
+              "primary-container": "#2B348B",
+              "surface-container-highest": "#e0e3e5",
+              "on-primary-container": "#d6dbff",
+              "on-error": "#ffffff",
+              "on-surface": "#191c1e",
+              "on-primary-fixed": "#ffffff",
+              "on-error-container": "#93000a",
+              "on-surface-variant": "#414844",
+              "on-background": "#191c1e",
+              "surface-tint": "#2B348B",
+              "secondary-fixed-dim": "#b9c7e0",
+              secondary: "#515f74",
+              "inverse-surface": "#2d3133",
+              "surface-bright": "#f7f9fb",
+              outline: "#717973",
+              "secondary-fixed": "#d5e3fd",
+              primary: "#2B348B",
+              "on-secondary-fixed": "#0d1c2f",
+              "surface-variant": "#e0e3e5",
+              "inverse-on-surface": "#eff1f3",
+              "primary-fixed-dim": "#b9c7e0",
+              surface: "#f7f9fb",
+              "surface-container-high": "#e6e8ea",
+              "on-primary": "#ffffff",
+              "on-secondary": "#ffffff",
+              "inverse-primary": "#b9c7e0",
+              "secondary-container": "#d5e3fd",
+              "error-container": "#ffdad6",
+              "tertiary-fixed-dim": "#6cd3f7",
+              error: "#ba1a1a",
+              "on-secondary-fixed-variant": "#3a485c",
+              "surface-container": "#eceef0",
+              "on-tertiary": "#ffffff",
+              "on-tertiary-fixed-variant": "#004e61",
+              tertiary: "#002a36",
+              "tertiary-container": "#004253",
+              "surface-container-low": "#f2f4f6",
+              "on-tertiary-fixed": "#001f28",
+              "surface-container-lowest": "#ffffff",
+              "outline-variant": "#c1c8c2",
+              "tertiary-fixed": "#b7eaff",
+              "on-tertiary-container": "#46b3d5",
+              "on-secondary-container": "#57657b",
+              "surface-dim": "#d8dadc",
+              background: "#f7f9fb",
+              "primary-fixed": "#d6dbff",
+            },
+            fontFamily: {
+              headline: ["Manrope"],
+              body: ["Inter"],
+              label: ["Inter"],
+            },
+            borderRadius: {
+              DEFAULT: "0.125rem",
+              lg: "0.25rem",
+              xl: "0.5rem",
+              full: "0.75rem",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+      }
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      h1,
+      h2,
+      h3 {
+        font-family: "Manrope", sans-serif;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-surface text-on-surface selection:bg-primary-fixed selection:text-primary"
+  >
+    <!-- TopNavBar Component Applied -->
+    <nav
+      class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-slate-950/80 backdrop-blur-md shadow-[0_20px_40px_rgba(17,26,117,0.06)]"
+    >
+      <div
+        class="flex justify-between items-center px-8 py-4 max-w-screen-2xl mx-auto"
+      >
+        <div class="flex items-center">
+          <img
+            alt="TOPAG Logo"
+            class="h-8 md:h-10 w-auto object-contain"
+            src="https://lh3.googleusercontent.com/aida/ADBb0uhyFyFWGtgXmKkKnjq61mzibs9vAExef4_TEF3uF4WA7vwYVQgFJ2zQmginaW9UdwNZsDI6aNgFqIrOXp-E_Wqd7YVwaBa_sv5f8tFgc9fCJQBLxs-uKI7xVn-HgvW4nkdXlwfbEmbTeTXMHcapTTAV6oVSDL5ZxjfuufaESYIev5EtRIeK12a2nkZ-fDbDdQ0T7yZdPQ1_NYmFPamBgwZDaFj_cUq7vvHYEV9c_JRpkjRAhkdQMrz9-hOOFr5YSwInTr9ap3ivMKE"
+          />
+        </div>
+        <div class="hidden md:flex items-center gap-8">
+          <a
+            class="font-manrope tracking-tight font-bold text-sm text-[#2B348B] dark:text-white border-b-2 border-[#2B348B] pb-1"
+            href="#services"
+            >Services</a
+          >
+          <a
+            class="font-manrope tracking-tight font-bold text-sm text-slate-600 dark:text-slate-400 hover:text-[#2B348B] transition-colors"
+            href="#portfolio"
+            >Portfolio</a
+          >
+          <a
+            class="font-manrope tracking-tight font-bold text-sm text-slate-600 dark:text-slate-400 hover:text-[#2B348B] transition-colors"
+            href="#about"
+            >About</a
+          >
+          <a
+            class="font-manrope tracking-tight font-bold text-sm text-slate-600 dark:text-slate-400 hover:text-[#2B348B] transition-colors"
+            href="#contact"
+            >Contact</a
+          >
+        </div>
+        <button
+          class="bg-[#2B348B] text-white px-6 py-2.5 rounded-md font-manrope text-sm font-bold tracking-tight duration-300 ease-in-out hover:scale-[1.02] hover:bg-brand-blue-light transition-transform active:opacity-80"
+        >
+          Request Quote
+        </button>
+      </div>
+    </nav>
+    <!-- Hero Section -->
+    <header
+      class="relative min-h-screen flex items-center pt-20 overflow-hidden"
+    >
+      <div class="absolute inset-0 z-0">
+        <img
+          alt="Land Surveying"
+          class="w-full h-full object-cover"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMwDJQwSE5dJ35YHyk5xy5WxVBTF4A-4DC3Medkx7UQsuBz5uH4rzf4OeYEp6jsm7dN81nfgxKEB-zVe1QONL1liFB5a7KwMGrF9RemwyKxMkDTKcyRFuGB5uCMWfxIq_BRnkqcELcjSb_39npiE87hTdSUUBbmDe2Qc3vfFIkzp2m9wK8vT50Xl-c3_yAZRA68Gccw7yd_YLxrujk0CJ9Sko9VtoEKdjEuloNZZLqYSXikhYsJsBrvZYg_fMvcHZplPl8pH5eoUHe"
+        />
+        <div
+          class="absolute inset-0 bg-gradient-to-r from-[#2B348B]/90 to-[#2B348B]/40"
+        ></div>
+      </div>
+      <div
+        class="relative z-10 max-w-7xl mx-auto px-4 md:px-8 w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
+      >
+        <div class="space-y-6 md:space-y-8">
+          <div
+            class="inline-flex items-center gap-2 px-3 py-1 bg-white/10 rounded-lg text-white border border-white/20 backdrop-blur-sm"
+          >
+            <span class="material-symbols-outlined text-sm"
+              >precision_manufacturing</span
+            >
+            <span
+              class="text-[10px] md:text-xs font-label uppercase tracking-widest font-bold"
+              >Líder em Geotecnologia</span
+            >
+          </div>
+          <h1
+            class="text-white text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tighter leading-[1.1]"
+          >
+            Precisão que Transforma o Solo,
+            <span class="text-primary-fixed">Sustentabilidade</span> que Protege
+            o Futuro.
+          </h1>
+          <p
+            class="text-blue-50/80 text-base md:text-xl font-body max-w-xl leading-relaxed"
+          >
+            Soluções avançadas em topografia e consultoria ambiental para
+            garantir a viabilidade técnica e legal do seu empreendimento.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 pt-4">
+            <button
+              class="bg-primary-fixed text-[#2B348B] px-8 py-4 rounded-md font-manrope font-extrabold text-lg hover:bg-white transition-all shadow-xl shadow-black/20"
+            >
+              Peça um Orçamento
+            </button>
+            <button
+              class="border border-white/20 bg-white/5 backdrop-blur-md text-white px-8 py-4 rounded-md font-manrope font-bold text-lg hover:bg-white/10 transition-all"
+            >
+              Nossos Projetos
+            </button>
+          </div>
+        </div>
+        <!-- Contextual Survey Badge -->
+        <div class="hidden lg:block relative">
+          <div
+            class="bg-surface-container-lowest/10 backdrop-blur-xl border border-white/10 p-8 rounded-xl shadow-2xl"
+          >
+            <div class="flex items-center justify-between mb-8">
+              <span
+                class="text-blue-50 font-label tracking-widest text-xs uppercase opacity-60"
+                >Status do Campo</span
+              >
+              <span
+                class="w-3 h-3 bg-blue-400 rounded-full animate-pulse"
+              ></span>
+            </div>
+            <div class="space-y-6">
+              <div
+                class="flex justify-between items-end border-b border-white/5 pb-4"
+              >
+                <div>
+                  <p
+                    class="text-blue-50/50 text-xs font-label uppercase tracking-widest"
+                  >
+                    Coordenadas Ativas
+                  </p>
+                  <p class="text-blue-50 text-xl font-bold font-manrope">
+                    10.309° S, 48.320° W
+                  </p>
+                </div>
+                <span class="material-symbols-outlined text-blue-400"
+                  >gps_fixed</span
+                >
+              </div>
+              <div
+                class="flex justify-between items-end border-b border-white/5 pb-4"
+              >
+                <div>
+                  <p
+                    class="text-blue-50/50 text-xs font-label uppercase tracking-widest"
+                  >
+                    Precisão RTK
+                  </p>
+                  <p class="text-blue-50 text-xl font-bold font-manrope">
+                    +/- 0.002m
+                  </p>
+                </div>
+                <span class="material-symbols-outlined text-blue-400"
+                  >verified</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Serviços Section -->
+    <section class="py-16 md:py-24 bg-surface-container-low" id="services">
+      <div class="max-w-7xl mx-auto px-4 md:px-8">
+        <div class="mb-12 md:mb-16">
+          <span
+            class="text-[#2B348B] font-label text-xs font-bold uppercase tracking-[0.2em]"
+            >Nossa Expertise</span
+          >
+          <h2
+            class="text-on-surface text-3xl md:text-5xl font-extrabold tracking-tight mt-2"
+          >
+            Soluções de Ponta a Ponta
+          </h2>
+        </div>
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"
+        >
+          <!-- Topografia -->
+          <div
+            class="group bg-surface-container-lowest p-8 md:p-10 rounded-xl transition-all hover:scale-[1.02] hover:bg-[#2B348B] duration-300"
+          >
+            <div
+              class="w-14 h-14 bg-[#2B348B] text-white rounded-lg flex items-center justify-center mb-8 group-hover:bg-white group-hover:text-[#2B348B]"
+            >
+              <span class="material-symbols-outlined text-3xl"
+                >architecture</span
+              >
+            </div>
+            <h3
+              class="text-2xl font-extrabold text-on-surface mb-4 group-hover:text-white"
+            >
+              Topografia
+            </h3>
+            <p
+              class="text-on-surface-variant leading-relaxed group-hover:text-white/80"
+            >
+              Levantamentos planialtimétricos, demarcação de lotes e
+              acompanhamento de obras com precisão milimétrica e tecnologia
+              GNSS.
+            </p>
+            <div
+              class="mt-8 flex items-center gap-2 text-[#2B348B] font-bold group-hover:text-white"
+            >
+              <span class="text-sm font-label uppercase tracking-wider"
+                >Ver Detalhes</span
+              >
+              <span class="material-symbols-outlined">arrow_forward</span>
+            </div>
+          </div>
+          <!-- Consultoria Ambiental -->
+          <div
+            class="group bg-surface-container-lowest p-8 md:p-10 rounded-xl transition-all hover:scale-[1.02] hover:bg-[#2B348B] duration-300"
+          >
+            <div
+              class="w-14 h-14 bg-[#2B348B] text-white rounded-lg flex items-center justify-center mb-8 group-hover:bg-white group-hover:text-[#2B348B]"
+            >
+              <span class="material-symbols-outlined text-3xl">eco</span>
+            </div>
+            <h3
+              class="text-2xl font-extrabold text-on-surface mb-4 group-hover:text-white"
+            >
+              Consultoria Ambiental
+            </h3>
+            <p
+              class="text-on-surface-variant leading-relaxed group-hover:text-white/80"
+            >
+              Licenciamento ambiental, PRAD, laudos de fauna e flora, e gestão
+              de resíduos para garantir total conformidade legal.
+            </p>
+            <div
+              class="mt-8 flex items-center gap-2 text-[#2B348B] font-bold group-hover:text-white"
+            >
+              <span class="text-sm font-label uppercase tracking-wider"
+                >Ver Detalhes</span
+              >
+              <span class="material-symbols-outlined">arrow_forward</span>
+            </div>
+          </div>
+          <!-- Georeferenciamento -->
+          <div
+            class="group bg-surface-container-lowest p-8 md:p-10 rounded-xl transition-all hover:scale-[1.02] hover:bg-[#2B348B] duration-300"
+          >
+            <div
+              class="w-14 h-14 bg-[#2B348B] text-white rounded-lg flex items-center justify-center mb-8 group-hover:bg-white group-hover:text-[#2B348B]"
+            >
+              <span class="material-symbols-outlined text-3xl">map</span>
+            </div>
+            <h3
+              class="text-2xl font-extrabold text-on-surface mb-4 group-hover:text-white"
+            >
+              Georeferenciamento
+            </h3>
+            <p
+              class="text-on-surface-variant leading-relaxed group-hover:text-white/80"
+            >
+              Certificação de imóveis rurais (SIGEF/INCRA) e urbanos com
+              georreferenciamento de alta precisão e análise geoespacial.
+            </p>
+            <div
+              class="mt-8 flex items-center gap-2 text-[#2B348B] font-bold group-hover:text-white"
+            >
+              <span class="text-sm font-label uppercase tracking-wider"
+                >Ver Detalhes</span
+              >
+              <span class="material-symbols-outlined">arrow_forward</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Sobre Nós Section -->
+    <section class="py-16 md:py-24 bg-surface overflow-hidden" id="about">
+      <div class="max-w-7xl mx-auto px-4 md:px-8">
+        <div
+          class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center"
+        >
+          <div class="relative order-2 lg:order-1">
+            <div
+              class="aspect-square bg-surface-container-high rounded-xl overflow-hidden"
+            >
+              <img
+                alt="Technical Team"
+                class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAY4qmLQLz1M6qXVOo6ScYP5gEAQ7d0GwFZDrgy87VNEdwQaAAoM6cbRTs2QvaRzGs-sKsWfXS30lSEBjB6l3W3v_Vet-95SmAsVfa9a2gv-b6cF7MHqB9nswEXts5_uOxFowy229chcpRawg3e69yFEpyUEzKZ8nV8yCVYPIxNpJGI26Q-0SLIcPwe0vVxWo39mdD3xWqMORd65ePIgL7d-Lr64STItoODm8Hy1ET7rP0G9XDw7Huuh_ZjvX-5S2aw-x77Vww11Jam"
+              />
+            </div>
+            <div
+              class="absolute -bottom-6 -right-6 md:-bottom-8 md:-right-8 bg-[#2B348B] p-6 md:p-8 rounded-lg text-white shadow-2xl max-w-[200px] md:max-w-xs hidden sm:block"
+            >
+              <p class="text-3xl md:text-4xl font-extrabold font-manrope">
+                15+
+              </p>
+              <p
+                class="text-[10px] md:text-sm font-label uppercase tracking-widest mt-2 opacity-70"
+              >
+                Anos de experiência técnica comprovada no campo.
+              </p>
+            </div>
+          </div>
+          <div class="space-y-6 order-1 lg:order-2">
+            <span
+              class="text-[#2B348B] font-label text-xs font-bold uppercase tracking-[0.2em]"
+              >Quem Somos</span
+            >
+            <h2
+              class="text-on-surface text-3xl md:text-5xl font-extrabold tracking-tight"
+            >
+              Fusão de Tecnologia e Responsabilidade
+            </h2>
+            <p
+              class="text-on-surface-variant text-base md:text-lg leading-relaxed"
+            >
+              A TOPAG nasceu da necessidade de integrar dados geoespaciais
+              rigorosos com práticas ambientais sustentáveis. Somos uma
+              consultoria boutique que atende desde grandes mineradoras até
+              proprietários rurais, focando na excelência do dado.
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 pt-6">
+              <div class="border-l-4 border-primary-fixed pl-4">
+                <h4 class="font-manrope font-bold text-on-surface">Missão</h4>
+                <p class="text-sm text-on-surface-variant">
+                  Entregar dados que impulsionam decisões seguras e
+                  responsáveis.
+                </p>
+              </div>
+              <div class="border-l-4 border-primary-fixed pl-4">
+                <h4 class="font-manrope font-bold text-on-surface">Visão</h4>
+                <p class="text-sm text-on-surface-variant">
+                  Ser a referência nacional em geotecnologia aplicada ao meio
+                  ambiente.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Diferenciais (Bento Grid) -->
+    <section class="py-16 md:py-24 bg-surface-container-low">
+      <div class="max-w-7xl mx-auto px-4 md:px-8">
+        <div class="text-center mb-12 md:mb-20">
+          <h2
+            class="text-on-surface text-3xl md:text-5xl font-extrabold tracking-tight"
+          >
+            Por que TOPAG?
+          </h2>
+          <p
+            class="text-on-surface-variant mt-4 max-w-2xl mx-auto text-base md:text-lg"
+          >
+            Investimos no que há de mais moderno para entregar resultados
+            superiores aos nossos clientes.
+          </p>
+        </div>
+        <div
+          class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-4 md:gap-6 h-auto"
+        >
+          <div
+            class="md:col-span-2 md:row-span-2 bg-[#2B348B] text-white p-8 md:p-10 rounded-xl flex flex-col justify-end relative overflow-hidden group min-h-[300px] md:min-h-0"
+          >
+            <div
+              class="absolute top-0 right-0 p-8 opacity-20 transition-transform group-hover:scale-110 duration-500"
+            >
+              <span
+                class="material-symbols-outlined text-[80px] md:text-[120px]"
+                >precision_manufacturing</span
+              >
+            </div>
+            <div class="relative z-10">
+              <h3 class="text-2xl md:text-3xl font-extrabold mb-4">
+                Equipamentos Modernos
+              </h3>
+              <p class="text-blue-50/70 leading-relaxed text-base md:text-lg">
+                Utilizamos drones RTK de última geração, estações totais
+                robóticas e receptores GNSS multifrequência para garantir o
+                menor erro possível.
+              </p>
+            </div>
+          </div>
+          <div
+            class="md:col-span-2 bg-surface-container-lowest p-6 md:p-8 rounded-xl border border-outline-variant/10 flex items-center gap-6 group hover:bg-[#d5e3fd] transition-colors duration-300"
+          >
+            <div
+              class="bg-[#d5e3fd] text-[#2B348B] p-4 rounded-lg group-hover:bg-white shrink-0"
+            >
+              <span class="material-symbols-outlined text-3xl">groups</span>
+            </div>
+            <div>
+              <h3 class="text-lg md:text-xl font-extrabold text-on-surface">
+                Equipe Especializada
+              </h3>
+              <p class="text-on-surface-variant text-sm mt-1">
+                Engenheiros e geógrafos com vasta experiência em campo.
+              </p>
+            </div>
+          </div>
+          <div
+            class="md:col-span-1 bg-surface-container-lowest p-6 md:p-8 rounded-xl border border-outline-variant/10 flex flex-col justify-center group hover:bg-[#b7eaff] transition-colors duration-300"
+          >
+            <div
+              class="bg-[#b7eaff] text-[#004e61] w-12 h-12 flex items-center justify-center rounded-lg mb-4 group-hover:bg-white"
+            >
+              <span class="material-symbols-outlined">airport_shuttle</span>
+            </div>
+            <h3 class="text-lg md:text-xl font-extrabold text-on-surface">
+              Entrega Ágil
+            </h3>
+            <p class="text-on-surface-variant text-sm mt-1">
+              Fluxo de processamento otimizado.
+            </p>
+          </div>
+          <div
+            class="md:col-span-1 bg-primary-fixed text-[#2B348B] p-6 md:p-8 rounded-xl flex flex-col justify-center group"
+          >
+            <div
+              class="bg-[#2B348B] text-white w-12 h-12 flex items-center justify-center rounded-lg mb-4"
+            >
+              <span class="material-symbols-outlined">verified_user</span>
+            </div>
+            <h3 class="text-lg md:text-xl font-extrabold">
+              Segurança Jurídica
+            </h3>
+            <p class="text-[#2B348B] text-sm mt-1">
+              Conformidade total com as normas vigentes.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contato Section -->
+    <section class="py-16 md:py-24 bg-surface" id="contact">
+      <div class="max-w-7xl mx-auto px-4 md:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+          <div>
+            <h2
+              class="text-on-surface text-3xl md:text-5xl font-extrabold tracking-tight"
+            >
+              Vamos mapear seu projeto?
+            </h2>
+            <p
+              class="text-on-surface-variant text-base md:text-lg mt-4 mb-8 md:mb-10"
+            >
+              Entre em contato para uma consultoria inicial sem compromisso.
+            </p>
+            <form class="space-y-6">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="space-y-2">
+                  <label
+                    class="text-xs font-label uppercase tracking-widest font-bold text-on-surface-variant"
+                    >Nome Completo</label
+                  >
+                  <input
+                    class="w-full bg-surface-container-low border-none focus:ring-2 focus:ring-[#2B348B] rounded-md px-4 py-3"
+                    placeholder="Seu nome"
+                    type="text"
+                  />
+                </div>
+                <div class="space-y-2">
+                  <label
+                    class="text-xs font-label uppercase tracking-widest font-bold text-on-surface-variant"
+                    >E-mail</label
+                  >
+                  <input
+                    class="w-full bg-surface-container-low border-none focus:ring-2 focus:ring-[#2B348B] rounded-md px-4 py-3"
+                    placeholder="email@exemplo.com"
+                    type="email"
+                  />
+                </div>
+              </div>
+              <div class="space-y-2">
+                <label
+                  class="text-xs font-label uppercase tracking-widest font-bold text-on-surface-variant"
+                  >Assunto</label
+                >
+                <select
+                  class="w-full bg-surface-container-low border-none focus:ring-2 focus:ring-[#2B348B] rounded-md px-4 py-3"
+                >
+                  <option>Topografia e Nivelamento</option>
+                  <option>Consultoria Ambiental</option>
+                  <option>Georreferenciamento Rural</option>
+                  <option>Outros Serviços</option>
+                </select>
+              </div>
+              <div class="space-y-2">
+                <label
+                  class="text-xs font-label uppercase tracking-widest font-bold text-on-surface-variant"
+                  >Mensagem</label
+                >
+                <textarea
+                  class="w-full bg-surface-container-low border-none focus:ring-2 focus:ring-[#2B348B] rounded-md px-4 py-3"
+                  placeholder="Descreva seu projeto..."
+                  rows="4"
+                ></textarea>
+              </div>
+              <button
+                class="w-full bg-[#2B348B] text-white py-4 rounded-md font-extrabold text-lg hover:bg-brand-blue-light transition-all"
+              >
+                Enviar Solicitação
+              </button>
+            </form>
+          </div>
+          <div class="flex flex-col gap-8">
+            <div
+              class="bg-surface-container-high rounded-xl overflow-hidden flex-1 min-h-[300px] md:min-h-[400px]"
+            >
+              <img
+                alt="Map"
+                class="w-full h-full object-cover"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwoLOLHQ98hdePFhQOcTnbExsWEJwCaZe9szS3zL2j3pYseWPQTIzexJswd591XGEEajVn1sgVwsRufWU9HMrZMAPoO2u1MRiDsbQiU4MX-GP-3-dCyhXM76jg69qH8zHT0c8QOWdALzCw9L01vn_eQC3wD9cbO7BRz_FnSJ15gYJA9wwOVfuLCm9s-WUXXRmQo-jc04KBstVnqzsHmq6ny-E-muupHZBpmn05PyAJ-57sLrQeKvXeMa91-m5E5jCfrPrDlcBq97X6"
+              />
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div class="p-6 bg-surface-container-low rounded-lg">
+                <span class="material-symbols-outlined text-[#2B348B] mb-2"
+                  >location_on</span
+                >
+                <h4 class="font-bold">Sede Administrativa</h4>
+                <p class="text-sm text-on-surface-variant">
+                  Quadra 103 Sul, Rua SO 05, Lote 24<br />Palmas, TO - Brasil
+                </p>
+              </div>
+              <div class="p-6 bg-surface-container-low rounded-lg">
+                <span class="material-symbols-outlined text-[#2B348B] mb-2"
+                  >call</span
+                >
+                <h4 class="font-bold">Atendimento</h4>
+                <p class="text-sm text-on-surface-variant">
+                  +55 (63) 3215-1000<br />contato@topag.com.br
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer Component Applied -->
+    <footer
+      class="bg-[#f5f2fb] dark:bg-slate-900 w-full border-t border-slate-200 dark:border-slate-800"
+    >
+      <div
+        class="grid grid-cols-1 md:grid-cols-4 gap-12 px-8 py-16 max-w-screen-2xl mx-auto"
+      >
+        <div class="space-y-4">
+          <div class="text-xl font-bold text-[#2B348B] dark:text-white">
+            <img
+              alt="TOPAG Logo"
+              class="h-8 w-auto object-contain"
+              src="https://lh3.googleusercontent.com/aida/ADBb0uhyFyFWGtgXmKkKnjq61mzibs9vAExef4_TEF3uF4WA7vwYVQgFJ2zQmginaW9UdwNZsDI6aNgFqIrOXp-E_Wqd7YVwaBa_sv5f8tFgc9fCJQBLxs-uKI7xVn-HgvW4nkdXlwfbEmbTeTXMHcapTTAV6oVSDL5ZxjfuufaESYIev5EtRIeK12a2nkZ-fDbDdQ0T7yZdPQ1_NYmFPamBgwZDaFj_cUq7vvHYEV9c_JRpkjRAhkdQMrz9-hOOFr5YSwInTr9ap3ivMKE"
+            />
+          </div>
+          <p
+            class="text-slate-500 dark:text-slate-400 font-inter text-sm leading-relaxed"
+          >
+            Referência técnica em georeferenciamento e consultoria ambiental
+            para o agronegócio e construção civil em Palmas e região.
+          </p>
+        </div>
+        <div>
+          <span
+            class="font-inter text-xs uppercase tracking-widest text-[#2B348B] dark:text-[#4d5acb] font-bold mb-4 block"
+            >Quick Links</span
+          >
+          <ul class="space-y-2">
+            <li>
+              <a
+                class="text-slate-500 dark:text-slate-400 font-inter text-sm hover:text-[#2B348B] dark:hover:text-white underline-offset-4 hover:underline transition-opacity opacity-90 hover:opacity-100"
+                href="#services"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-slate-500 dark:text-slate-400 font-inter text-sm hover:text-[#2B348B] dark:hover:text-white underline-offset-4 hover:underline transition-opacity opacity-90 hover:opacity-100"
+                href="#portfolio"
+                >Portfolio</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-slate-500 dark:text-slate-400 font-inter text-sm hover:text-[#2B348B] dark:hover:text-white underline-offset-4 hover:underline transition-opacity opacity-90 hover:opacity-100"
+                href="#about"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-slate-500 dark:text-slate-400 font-inter text-sm hover:text-[#2B348B] dark:hover:text-white underline-offset-4 hover:underline transition-opacity opacity-90 hover:opacity-100"
+                href="#contact"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <span
+            class="font-inter text-xs uppercase tracking-widest text-[#2B348B] dark:text-[#4d5acb] font-bold mb-4 block"
+            >Legal</span
+          >
+          <ul class="space-y-2">
+            <li>
+              <a
+                class="text-slate-500 dark:text-slate-400 font-inter text-sm hover:text-[#2B348B] dark:hover:text-white underline-offset-4 hover:underline transition-opacity opacity-90 hover:opacity-100"
+                href="#"
+                >Privacy Policy</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-slate-500 dark:text-slate-400 font-inter text-sm hover:text-[#2B348B] dark:hover:text-white underline-offset-4 hover:underline transition-opacity opacity-90 hover:opacity-100"
+                href="#"
+                >Terms of Service</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <span
+            class="font-inter text-xs uppercase tracking-widest text-[#2B348B] dark:text-[#4d5acb] font-bold mb-4 block"
+            >Newsletter</span
+          >
+          <div class="flex gap-2">
+            <input
+              class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded px-4 py-2 text-sm focus:ring-[#2B348B] w-full"
+              placeholder="Seu e-mail"
+              type="email"
+            />
+            <button
+              class="bg-[#2B348B] text-white p-2 rounded hover:bg-brand-blue-light transition-colors shrink-0"
+            >
+              <span class="material-symbols-outlined">send</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="max-w-screen-2xl mx-auto px-8 py-8 border-t border-slate-200 dark:border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4"
+      >
+        <p class="font-inter text-xs text-slate-500 dark:text-slate-400">
+          © 2024 TOPAG Topography &amp; Environmental Consulting. All rights
+          reserved.
+        </p>
+        <div class="flex gap-6">
+          <a
+            class="text-slate-500 hover:text-[#2B348B] transition-colors"
+            href="#"
+            ><span class="material-symbols-outlined text-xl">language</span></a
+          >
+          <a
+            class="text-slate-500 hover:text-[#2B348B] transition-colors"
+            href="#"
+            ><span class="material-symbols-outlined text-xl">public</span></a
+          >
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

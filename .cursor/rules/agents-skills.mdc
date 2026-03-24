@@ -1,0 +1,29 @@
+---
+description: Sempre usar skills do repositório em .agents/skills/ (Next, React, shadcn, composição).
+alwaysApply: true
+---
+
+# Skills em `.agents/skills/`
+
+Para **toda** tarefa neste projeto:
+
+1. **Descobrir**: Listar ou inspecionar `.agents/skills/` e localizar pastas que tenham `SKILL.md` na raiz da skill.
+2. **Escolher**: Para cada pedido, identificar quais skills são relevantes (tópico, stack, tipo de arquivo).
+3. **Ler antes de codar**: Abrir o(s) `SKILL.md` aplicável(is) com a ferramenta de leitura e seguir o fluxo e as convenções descritas lá — não improvisar em cima do que a skill já documenta.
+4. **Profundidade**: Quando o `SKILL.md` apontar arquivos em `rules/`, `*.md` auxiliares ou subpastas, leia-os quando forem necessários para a tarefa concreta.
+
+## Skills disponíveis neste repo (raiz = `SKILL.md`)
+
+| Pasta | Quando usar |
+|-------|-------------|
+| `next-best-practices` | Next.js, App Router, RSC, rotas, metadata, imagens, erros, handlers |
+| `vercel-react-best-practices` | Performance React/Next, bundles, hooks, server/client, re-renders |
+| `vercel-composition-patterns` | APIs de componentes, compound components, contexto, boolean props |
+| `shadcn` | shadcn/ui, `components.json`, CLI, estilos, formulários, ícones |
+
+Se nenhuma skill couber, siga normas gerais do projeto; caso contrário, **priorize** o que está nas skills do `.agents/`.
+
+## O que não fazer
+
+- Não ignore skills relevantes só porque a resposta parece óbvia.
+- Não substitua o conteúdo das skills por memória genérica de frameworks — este Next pode divergir das versões “comuns”; confira o que está em `SKILL.md` e no `node_modules/next` quando a skill orientar.
