@@ -1,5 +1,5 @@
-import Image from "next/image";
 import { MapPin, Phone } from "lucide-react";
+import Image from "next/image";
 
 import { ContactForm } from "@/components/landing/contact-form";
 import { LANDING_IMAGES } from "@/lib/landing-images";
@@ -37,9 +37,7 @@ export function ContactSection() {
                 />
                 <h4 className="font-bold">Sede Administrativa</h4>
                 <p className="text-sm text-on-surface-variant">
-                  Quadra 103 Sul, Rua SO 05, Lote 24
-                  <br />
-                  Palmas, TO - Brasil
+                  R. Vinte e Seis, quadra 148 - lote 08 - Jardim Aureny III (Taquaralto), Palmas - TO, 77062-060
                 </p>
               </div>
               <div className="rounded-lg bg-surface-container-low p-6">
@@ -50,7 +48,7 @@ export function ContactSection() {
                 />
                 <h4 className="font-bold">Atendimento</h4>
                 <p className="text-sm text-on-surface-variant">
-                  +55 (63) 3215-1000
+                  +55 (63) 984167175
                   <br />
                   contato@topag.com.br
                 </p>

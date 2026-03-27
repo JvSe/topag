@@ -41,12 +41,10 @@ export function SiteHeader() {
             Contato
           </Link>
         </div>
-        <button
-          type="button"
-          className="rounded-md bg-brand-blue px-6 py-2.5 font-headline text-sm font-bold tracking-tight text-white transition-transform duration-300 ease-in-out hover:scale-[1.02] hover:bg-brand-blue-light active:opacity-80"
-        >
-          Solicitar orçamento
-        </button>
+        <Link href="#contact" className="rounded-md bg-brand-blue px-6 py-2.5 font-headline text-sm font-bold tracking-tight text-white transition-transform duration-300 ease-in-out hover:scale-[1.02] hover:bg-brand-blue-light active:opacity-80">
+          Solicite um Orçamento
+        </Link>
+
       </div>
     </nav>
   );

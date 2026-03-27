@@ -22,7 +22,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "TOPAG | Precisão que Transforma o Solo",
+  title: "TOPAG | Topografia e Consultoria Ambiental",
   description:
     "Soluções em topografia, georeferenciamento e consultoria ambiental em Palmas e região.",
 };

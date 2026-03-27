@@ -1,6 +1,34 @@
+"use client";
+
+const DEFAULT_WHATSAPP_E164 = "5563984167175";
+
+function onlyDigits(phone: string): string {
+  return phone.replace(/\D/g, "");
+}
+
+function buildWhatsAppUrl(phoneDigits: string, text: string): string {
+  return `https://wa.me/${phoneDigits}?text=${encodeURIComponent(text)}`;
+}
+
 export function PortfolioSection() {
+  const onClickProjects = () => {
+    const raw = process.env.NEXT_PUBLIC_WHATSAPP_PHONE ?? DEFAULT_WHATSAPP_E164;
+    const digits = onlyDigits(raw);
+
+    const text = [
+      "Olá! Tenho interesse nos projetos realizados pela TOPAG.",
+      "Podem me enviar exemplos e explicar como funciona o atendimento?",
+    ].join("\n");
+
+    const url = buildWhatsAppUrl(digits, text);
+    window.open(url, "_blank", "noopener,noreferrer");
+  };
+
   return (
-    <section className="border-y border-outline-variant/20 bg-surface py-16 md:py-20" id="portfolio">
+    <section
+      className="border-y border-outline-variant/20 bg-surface py-16 md:py-20"
+      id="portfolio"
+    >
       <div className="mx-auto max-w-7xl px-4 text-center md:px-8">
         <span className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-brand-blue">
           Portfólio
@@ -15,6 +43,7 @@ export function PortfolioSection() {
         <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
           <button
             type="button"
+            onClick={onClickProjects}
             className="rounded-md bg-brand-blue px-8 py-3 font-headline text-sm font-bold text-white transition-colors hover:bg-brand-blue-light"
           >
             Ver projetos realizados

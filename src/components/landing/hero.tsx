@@ -2,8 +2,12 @@ import { BadgeCheck, Factory, LocateFixed } from "lucide-react";
 import Image from "next/image";
 
 import { LANDING_IMAGES } from "@/lib/landing-images";
+import Link from "next/link";
+import { ButtonProjects } from "../button-projects";
+
 
 export function Hero() {
+
   return (
     <header className="relative flex min-h-screen items-center overflow-hidden pt-20">
       <div className="absolute inset-0 z-0">
@@ -35,18 +39,10 @@ export function Hero() {
             garantir a viabilidade técnica e legal do seu empreendimento.
           </p>
           <div className="flex flex-col gap-4 pt-4 sm:flex-row">
-            <button
-              type="button"
-              className="rounded-md bg-brand-blue px-8 py-4 font-headline text-lg font-extrabold text-white shadow-xl shadow-black/20 transition-all hover:filter-brightness-125 cursor-pointer"
-            >
-              Peça um Orçamento
-            </button>
-            <button
-              type="button"
-              className="rounded-md border border-white/20 bg-white/5 px-8 py-4 font-headline text-lg font-bold text-white backdrop-blur-md transition-all hover:bg-white/10"
-            >
-              Nossos Projetos
-            </button>
+            <Link href="#contact" className="rounded-md bg-brand-blue px-8 py-4 font-headline text-lg font-extrabold text-white shadow-xl shadow-black/20  hover:filter-brightness-125 cursor-pointer  tracking-tight  transition-transform duration-300 ease-in-out hover:scale-[1.02] hover:bg-brand-blue-light active:opacity-80">
+              Solicite um Orçamento
+            </Link>
+            <ButtonProjects />
           </div>
         </div>
         <div className="relative hidden lg:block">

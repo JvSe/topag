@@ -1,5 +1,5 @@
 ---
-description: Sempre usar skills do repositório em .agents/skills/ (Next, React, shadcn, composição).
+description: Sempre usar skills do repositório em .agents/skills/ (Next, React, shadcn, composição, frontend-design).
 alwaysApply: true
 ---
 
@@ -20,6 +20,7 @@ Para **toda** tarefa neste projeto:
 | `vercel-react-best-practices` | Performance React/Next, bundles, hooks, server/client, re-renders |
 | `vercel-composition-patterns` | APIs de componentes, compound components, contexto, boolean props |
 | `shadcn` | shadcn/ui, `components.json`, CLI, estilos, formulários, ícones |
+| `frontend-design` | UI/landing/páginas/componentes com qualidade visual (evitar estética genérica); styling/embelezamento de interface |
 
 Se nenhuma skill couber, siga normas gerais do projeto; caso contrário, **priorize** o que está nas skills do `.agents/`.
 
