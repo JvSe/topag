@@ -100,6 +100,7 @@ export default function RootLayout({
         "@type": "Organization",
         name: "TOPAG",
         url: baseUrl + "/",
+        foundingDate: "2000-01-01",
         email: SITE_CONTACT_EMAIL,
         logo: {
           "@type": "ImageObject",

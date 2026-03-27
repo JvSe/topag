@@ -19,10 +19,10 @@ export function AboutSection() {
             </div>
             <div className="absolute -bottom-6 -right-6 hidden max-w-[200px] rounded-lg bg-brand-blue p-6 text-white shadow-2xl sm:block md:-bottom-8 md:-right-8 md:max-w-xs md:p-8">
               <p className="font-headline text-3xl font-extrabold md:text-4xl">
-                15+
+                26+
               </p>
               <p className="mt-2 font-sans text-[10px] font-medium uppercase tracking-widest opacity-70 md:text-sm">
-                Anos de experiência técnica comprovada no campo.
+                Anos de atuação desde 2000, comprovados no campo.
               </p>
             </div>
           </div>
@@ -35,9 +35,11 @@ export function AboutSection() {
             </h2>
             <p className="text-base leading-relaxed text-on-surface-variant md:text-lg">
               A TOPAG nasceu da necessidade de integrar dados geoespaciais
-              rigorosos com práticas ambientais sustentáveis. Somos uma
-              consultoria boutique que atende desde grandes mineradoras até
-              proprietários rurais, focando na excelência do dado.
+              rigorosos com práticas ambientais sustentáveis. Atuamos na área
+              desde 2000, com trajetória técnica reconhecida no mercado.
+              Somos uma consultoria boutique que atende desde grandes
+              mineradoras até proprietários rurais, focando na excelência do
+              dado.
             </p>
             <div className="grid grid-cols-1 gap-6 pt-6 sm:grid-cols-2 md:gap-8">
               <div className="border-l-4 border-primary-fixed pl-4">
