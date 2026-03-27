@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import { SITE_CONTACT_EMAIL } from "@/lib/site-contact";
+
 export function SiteFooter() {
   return (
     <footer className="w-full border-t border-slate-200 bg-footer-tint dark:border-slate-800 dark:bg-slate-900">
@@ -88,7 +90,14 @@ export function SiteFooter() {
           © 2026 TOPAG — Topografia e consultoria ambiental. Todos os direitos
           reservados.
         </p>
-
+        <p className="font-sans text-xs text-slate-500 dark:text-slate-400">
+          <a
+            href={`mailto:${SITE_CONTACT_EMAIL}`}
+            className="underline-offset-4 transition-colors hover:text-brand-blue hover:underline dark:hover:text-white"
+          >
+            {SITE_CONTACT_EMAIL}
+          </a>
+        </p>
       </div>
     </footer>
   );

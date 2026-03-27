@@ -3,6 +3,7 @@ import Image from "next/image";
 
 import { ContactForm } from "@/components/landing/contact-form";
 import { LANDING_IMAGES } from "@/lib/landing-images";
+import { SITE_CONTACT_EMAIL } from "@/lib/site-contact";
 
 export function ContactSection() {
   return (
@@ -48,9 +49,19 @@ export function ContactSection() {
                 />
                 <h4 className="font-bold">Atendimento</h4>
                 <p className="text-sm text-on-surface-variant">
-                  +55 (63) 984167175
+                  <a
+                    href="tel:+5563984167175"
+                    className="text-on-surface-variant underline-offset-2 hover:text-brand-blue hover:underline"
+                  >
+                    +55 (63) 984167175
+                  </a>
                   <br />
-                  contato@topag.com.br
+                  <a
+                    href={`mailto:${SITE_CONTACT_EMAIL}`}
+                    className="text-on-surface-variant underline-offset-2 hover:text-brand-blue hover:underline"
+                  >
+                    {SITE_CONTACT_EMAIL}
+                  </a>
                 </p>
               </div>
             </div>
