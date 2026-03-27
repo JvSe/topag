@@ -11,6 +11,11 @@
       "sourceType": "github",
       "computedHash": "515ba75178bd44875812d9a560bdf14651f86709f89cf1d4f209638e879807f3"
     },
+    "nextjs-seo": {
+      "source": "laguagu/claude-code-nextjs-skills",
+      "sourceType": "github",
+      "computedHash": "067dbf680b0ccf69c586b947fa0012e2adba5298b9f553391ccab36003067f5f"
+    },
     "shadcn": {
       "source": "shadcn/ui",
       "sourceType": "github",

@@ -151,3 +151,55 @@
     font-family: var(--font-headline);
   }
 }
+
+/* Portfólio: carrossel horizontal contínuo */
+@keyframes portfolio-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.portfolio-marquee-outer {
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 8%,
+    black 92%,
+    transparent
+  );
+}
+
+.portfolio-marquee-track {
+  display: flex;
+  width: max-content;
+  gap: clamp(1rem, 2.5vw, 1.75rem);
+  padding-block: 0.5rem;
+  animation: portfolio-marquee 50s linear infinite;
+}
+
+.portfolio-marquee-track:hover {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .portfolio-marquee-outer {
+    overflow-x: auto;
+    overflow-y: hidden;
+    mask-image: none;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .portfolio-marquee-track {
+    animation: none;
+    padding-inline: 1rem;
+  }
+
+  .portfolio-marquee-item {
+    scroll-snap-align: center;
+  }
+}
